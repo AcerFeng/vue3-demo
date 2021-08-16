@@ -9,6 +9,7 @@
   "dependencies": {
     "@vueuse/core": "^6.0.0",
     "@vueuse/head": "^0.6.0",
+    "element-plus": "^1.0.2-beta.70",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.2",
