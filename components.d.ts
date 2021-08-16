@@ -12,7 +12,9 @@ declare module 'vue' {
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
     CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    MonoIconsWind: typeof import('virtual:vite-icons/mono-icons/wind')['default']
     README: typeof import('./src/components/README.md')['default']
+    WindicssExampleBlock: typeof import('./src/components/windicss-example-block/index.vue')['default']
   }
 }
 
