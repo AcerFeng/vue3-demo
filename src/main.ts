@@ -3,6 +3,8 @@ import 'vue-global-api'
 import { ViteSSG } from 'vite-ssg'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
+import ElementPlus from 'element-plus'
+import 'element-plus/lib/theme-chalk/index.css'
 import App from './App.vue'
 
 // windicss layers
@@ -24,5 +26,8 @@ export const createApp = ViteSSG(
   (ctx) => {
     // install all modules under `modules/`
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
+
+    const { app } = ctx
+    app.use(ElementPlus)
   },
 )

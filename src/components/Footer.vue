@@ -19,6 +19,9 @@ const toggleLocales = () => {
     <router-link class="icon-btn mx-2" to="/windicss" :title="`windicss`">
       <mono-icons-wind />
     </router-link>
+    <router-link class="icon-btn mx-2" to="/element-ui" :title="`element-ui`">
+      <ri-palette-fill />
+    </router-link>
 
     <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark">
       <carbon-moon v-if="isDark" />
