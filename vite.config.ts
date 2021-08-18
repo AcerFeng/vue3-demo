@@ -1,8 +1,8 @@
 import path from 'path'
 import { ConfigEnv, UserConfigExport } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
+// import Pages from 'vite-plugin-pages'
+// import Layouts from 'vite-plugin-vue-layouts'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
@@ -36,12 +36,12 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       }),
 
       // https://github.com/hannoeru/vite-plugin-pages
-      Pages({
-        extensions: ['vue', 'md'],
-      }),
+      // Pages({
+      //   extensions: ['vue', 'md'],
+      // }),
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-      Layouts(),
+      // Layouts(),
 
       // https://github.com/antfu/vite-plugin-components
       ViteComponents({
