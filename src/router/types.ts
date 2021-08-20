@@ -5,14 +5,18 @@ export type Component<T extends any = any> =
   | (() => Promise<typeof import('*.vue')>)
   | (() => Promise<T>)
 
-export interface IRouteMeta {
+export interface RouteMeta {
   title: string
+  icon?: string
 }
 
-export interface IRoute {
+export interface Route {
+  path: string
   name: string
-  meta: IRouteMeta
-  component: Component
-  children: IRoute[]
-  // props?:
+  component?: Component
+  meta?: RouteMeta
+  children?: Route[]
+  props?: Object
+  fullPath?: string
+  redirect?: string
 }
