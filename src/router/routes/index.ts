@@ -1,7 +1,7 @@
 import { Route } from '~/router/types'
 
 const modules = import.meta.globEager('./modules/**/*.ts')
-const routes = []
+const routes: Route[] = []
 
 Object.keys(modules).forEach((key) => {
   const module = modules[key].default || {}
@@ -18,7 +18,17 @@ const rootRoute: Route = {
   },
 }
 
-export const routes = [
+const loginRoute: Route = {
+  path: '/login',
+  name: 'Login',
+  component: () => import('~/views/sys/login/Login.vue'),
+  meta: {
+    title: 'Login',
+  },
+}
+
+export const basicRoutes = [
   rootRoute,
-  
+  loginRoute,
+  ...routes,
 ]

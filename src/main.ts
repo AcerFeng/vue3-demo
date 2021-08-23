@@ -1,8 +1,9 @@
 // register vue composition api globally
 import 'vue-global-api'
-import { ViteSSG } from 'vite-ssg'
-import generatedRoutes from 'virtual:generated-pages'
-import { setupLayouts } from 'virtual:generated-layouts'
+import { createApp } from 'vue'
+// import { ViteSSG } from 'vite-ssg'
+// import generatedRoutes from 'virtual:generated-pages'
+// import { setupLayouts } from 'virtual:generated-layouts'
 import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 import App from './App.vue'
@@ -16,18 +17,30 @@ import './styles/main.css'
 import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
+import { router } from '~/router/index'
 
-const routes = setupLayouts(generatedRoutes)
+// const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
-export const createApp = ViteSSG(
-  App,
-  { routes },
-  (ctx) => {
-    // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
+// export const createApp = ViteSSG(
+//   App,
+//   { routes },
+//   (ctx) => {
+//     // install all modules under `modules/`
+//     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
 
-    const { app } = ctx
-    app.use(ElementPlus)
-  },
-)
+//     const { app } = ctx
+//     app.use(ElementPlus)
+//   },
+// )
+
+async function start() {
+  const app = createApp(App)
+  app.use(router)
+  app.use(ElementPlus)
+
+  // await router.isReady()
+  app.mount('#app', true)
+}
+
+start()

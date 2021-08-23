@@ -5,6 +5,13 @@ button:
   home: Home
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+menu:
+  dashboard: Dashboard
+  sys: Sys
+  test: Test
+  config: System config
+login:
+  login: Login
 intro:
   desc: Opinionated Vite Starter Template
   dynamic-route: Demo of dynamic route
