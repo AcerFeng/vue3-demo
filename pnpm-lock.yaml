@@ -24,6 +24,7 @@ specifiers:
   nprogress: ^0.2.0
   pnpm: ^6.13.0
   prism-theme-vars: ^0.2.2
+  sass: ^1.38.1
   typescript: ^4.3.5
   vite: ^2.4.4
   vite-plugin-components: ^0.13.2
@@ -73,6 +74,7 @@ devDependencies:
   markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.1.8
   pnpm: 6.13.0
+  sass: 1.38.1
   typescript: 4.3.5
   vite: 2.4.4
   vite-plugin-components: 0.13.2_vite@2.4.4
@@ -5326,6 +5328,14 @@ packages:
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: true
+
+  /sass/1.38.1:
+    resolution: {integrity: sha512-Lj8nPaSYOuRhgqdyShV50fY5jKnvaRmikUNalMPmbH+tKMGgEKVkltI/lP30PEfO2T1t6R9yc2QIBLgOc3uaFw==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
     dev: true
 
   /saxes/5.0.1:
