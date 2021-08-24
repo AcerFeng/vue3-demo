@@ -7,7 +7,9 @@
     "build-ssg": "cross-env NODE_ENV=production vite-ssg build",
     "preview": "vite preview",
     "preview-https": "serve dist",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "test:unit": "jest",
+    "test:unit-coverage": "jest --coverage"
   },
   "dependencies": {
     "@vueuse/core": "^6.0.0",
@@ -27,16 +29,21 @@
     "@antfu/eslint-config": "^0.7.0",
     "@iconify/json": "^1.1.387",
     "@intlify/vite-plugin-vue-i18n": "^2.4.0",
+    "@types/jest": "^27.0.1",
     "@types/mockjs": "^1.0.4",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@vitejs/plugin-vue": "^1.4.0",
     "@vue/compiler-sfc": "^3.2.2",
     "@vue/server-renderer": "^3.2.2",
+    "@vue/test-utils": "^2.0.0-rc.12",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.0.6",
     "critters": "^0.0.10",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "https-localhost": "^4.6.5",
+    "jest": "^27.0.6",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.1.8",
     "pnpm": "^6.13.0",
@@ -45,6 +52,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.3.5",
     "vite": "^2.4.4",
     "vite-plugin-components": "^0.13.2",
@@ -56,6 +64,7 @@
     "vite-plugin-vue-layouts": "^0.3.1",
     "vite-plugin-windicss": "^1.2.7",
     "vite-ssg": "^0.14.5",
-    "vue-tsc": "^0.2.3"
+    "vue-tsc": "^0.2.3",
+    "vue3-jest": "27.0.0-alpha.2"
   }
 }

@@ -16,11 +16,23 @@
     "types": [
       "vite/client",
       "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client"
+      "vite-plugin-vue-layouts/client",
+      "jest"
     ],
     "paths": {
       "~/*": ["src/*"]
     }
   },
+  "include": [
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "mock/**/*.ts",
+    "vite.config.ts"
+, "tests/unit/utils/matchMedia.mock"  ],
   "exclude": ["dist", "node_modules"]
 }
