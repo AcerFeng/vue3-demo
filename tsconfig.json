@@ -33,6 +33,6 @@
     "types/**/*.ts",
     "mock/**/*.ts",
     "vite.config.ts"
-, "tests/unit/utils/matchMedia.mock"  ],
+, "tests/e2e/plugins/indexjs", "tests/unit/utils/matchMedia.mock"  ],
   "exclude": ["dist", "node_modules"]
 }

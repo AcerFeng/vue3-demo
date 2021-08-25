@@ -13,6 +13,7 @@ declare module 'vue' {
     MonoIconsWind: typeof import('virtual:vite-icons/mono-icons/wind')['default']
     README: typeof import('./src/components/README.md')['default']
     RiPaletteFill: typeof import('virtual:vite-icons/ri/palette-fill')['default']
+    Test: typeof import('./src/components/Test.vue')['default']
     WindicssExampleBlock: typeof import('./src/components/windicss-example-block/index.vue')['default']
   }
 }

@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
+    "start": "vite",
+    "serve": "vite",
     "dev": "vite --port 3333 --open",
     "dev-mock": "cross-env NODE_ENV=development vite --mode mock --port 3334 --open",
     "build": "cross-env NODE_ENV=production vite build",
@@ -8,8 +10,11 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "test": "pnpm run test:unit && pnpm run server:test:e2e",
     "test:unit": "jest",
-    "test:unit-coverage": "jest --coverage"
+    "test:unit-coverage": "jest --coverage",
+    "server:test:e2e": "start-server-and-test start http-get://localhost:3000 test:e2e",
+    "test:e2e": "cypress run --config-file cypress.json"
   },
   "dependencies": {
     "@vueuse/core": "^6.0.0",
@@ -41,6 +46,7 @@
     "babel-jest": "^27.0.6",
     "critters": "^0.0.10",
     "cross-env": "^7.0.3",
+    "cypress": "^8.3.0",
     "eslint": "^7.32.0",
     "https-localhost": "^4.6.5",
     "jest": "^27.0.6",
@@ -48,6 +54,7 @@
     "markdown-it-prism": "^2.1.8",
     "pnpm": "^6.13.0",
     "sass": "^1.38.1",
+    "start-server-and-test": "^1.13.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
