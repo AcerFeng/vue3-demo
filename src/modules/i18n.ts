@@ -1,3 +1,4 @@
+// import { App } from '@vue/runtime-core'
 import { createI18n } from 'vue-i18n'
 import { UserModule } from '~/types'
 
@@ -20,4 +21,14 @@ export const install: UserModule = ({ app }) => {
   })
 
   app.use(i18n)
+}
+
+// for test
+export function getI18n() {
+  const i18n = createI18n({
+    legacy: false,
+    locale: 'en',
+    messages,
+  })
+  return i18n
 }
