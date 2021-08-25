@@ -9,6 +9,7 @@
     "build-ssg": "cross-env NODE_ENV=production vite-ssg build",
     "preview": "vite preview",
     "preview-https": "serve dist",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "test": "pnpm run test:unit && pnpm run server:test:e2e",
     "test:unit": "jest",
