@@ -18,7 +18,8 @@
     "server:test:e2e": "start-server-and-test start http-get://localhost:3000 test:e2e",
     "test:e2e": "cypress run --config-file cypress.json",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@vueuse/core": "^6.0.0",
@@ -50,9 +51,11 @@
     "@vue/test-utils": "^2.0.0-rc.12",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.0.6",
+    "commitizen": "^4.2.4",
     "critters": "^0.0.10",
     "cross-env": "^7.0.3",
     "cypress": "^8.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "https-localhost": "^4.6.5",
     "husky": "^7.0.0",
@@ -81,5 +84,10 @@
     "vite-ssg": "^0.14.5",
     "vue-tsc": "^0.2.3",
     "vue3-jest": "27.0.0-alpha.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
