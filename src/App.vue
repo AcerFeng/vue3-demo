@@ -10,6 +10,7 @@
 //     { name: 'description', content: 'Opinionated Vite Starter Template' },
 //   ],
 // })
+
 </script>
 
 <template>
