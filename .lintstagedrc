@@ -1,0 +1,5 @@
+{
+  "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+  "*.{html,vue,css,scss,sass,less}": ["stylelint --fix"],
+  "*.vue": ["eslint --fix", "stylelint --fix"]
+}
