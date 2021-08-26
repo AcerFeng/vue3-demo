@@ -10,3 +10,11 @@ declare module '*.md' {
   const component: ComponentOptions
   export default component
 }
+
+declare module '*.vue' {
+  import { DefineComponent } from 'vue'
+  const Component: DefineComponent<{}, {}, any>
+  export default Component
+}
+
+declare module 'vue3-jest'
